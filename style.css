@@ -1,140 +1,80 @@
-/* styles.css - Shared styles for Statistics Made Easy */
-/* Green and white theme: White bg, green accents */
-
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #333;
-    background-color: #ffffff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  background-color: #F9FAFB;
+  color: #222;
+  line-height: 1.7;
 }
 
 header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  background: linear-gradient(120deg, #1565C0, #2E7D32);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.4rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
 }
 
 nav {
-    background-color: #333;
-    overflow: hidden;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav li {
-    display: inline;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  text-align: center;
 }
 
 nav a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    display: block;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #1565C0;
+  font-weight: 600;
 }
 
 nav a:hover {
-    background-color: #66BB6A;
-}
-
-/* Mobile nav toggle */
-.nav-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
+  color: #2E7D32;
 }
 
 main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
 }
 
-h1, h2, h3 {
-    color: #4CAF50;
+section {
+  background: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
-.formula {
-    font-family: 'Courier New', monospace;
-    background-color: #f9f9f9;
-    padding: 10px;
-    border-left: 5px solid #4CAF50;
-    margin: 10px 0;
+h1, h2 {
+  color: #2E7D32;
 }
 
-.cta-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    margin: 10px 0;
+ul li {
+  margin-bottom: 8px;
 }
 
-.cta-button:hover {
-    background-color: #66BB6A;
-}
-
-.adsense-placeholder {
-    background-color: #f0f0f0;
-    border: 1px dashed #ccc;
-    padding: 20px;
-    text-align: center;
-    margin: 20px 0;
-    color: #666;
-}
-
-.faq {
-    margin-top: 40px;
-}
-
-.faq h3 {
-    margin-bottom: 10px;
-}
-
-.faq p {
-    margin-bottom: 20px;
+.cta {
+  margin-top: 20px;
+  padding: 15px;
+  background: #E8F5E9;
+  border-left: 5px solid #2E7D32;
+  font-weight: 600;
 }
 
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: 40px;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        display: none; /* Hidden by default on mobile */
-    }
-    nav ul.show {
-        display: flex;
-    }
-    .nav-toggle {
-        display: block;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-    }
-    main {
-        padding: 10px;
-    }
+  text-align: center;
+  padding: 15px;
+  background: #222;
+  color: #ccc;
+  font-size: 0.9rem;
 }
