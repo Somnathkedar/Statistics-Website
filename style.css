@@ -1,4 +1,4 @@
-/* ===== GLOBAL ===== */
+/* ===== RESET & GLOBAL ===== */
 * {
   box-sizing: border-box;
 }
@@ -6,38 +6,37 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: #f4f7fb;
-  color: #222;
   line-height: 1.7;
+  color: #222;
 }
 
-/* ===== HERO HEADER ===== */
+/* ===== HERO ===== */
 .hero {
   background: linear-gradient(120deg, #1e88e5, #43a047);
   color: white;
-  text-align: center;
   padding: 60px 20px;
+  text-align: center;
 }
 
 .hero h1 {
   margin: 0;
-  font-size: 2.4rem;
+  font-size: 2.5rem;
 }
 
 .hero p {
-  font-size: 1.1rem;
+  margin-top: 10px;
+  font-size: 1.2rem;
   opacity: 0.9;
 }
 
-/* ===== NAVIGATION ===== */
+/* ===== NAV ===== */
 nav {
-  background: #ffffff;
-  padding: 12px;
+  background: white;
   text-align: center;
+  padding: 12px;
   border-bottom: 1px solid #ddd;
   position: sticky;
   top: 0;
-  z-index: 1000;
 }
 
 nav a {
@@ -58,7 +57,6 @@ main {
   padding: 0 20px;
 }
 
-/* ===== CONTENT SECTIONS ===== */
 section {
   background: white;
   padding: 30px;
@@ -67,58 +65,20 @@ section {
   box-shadow: 0 10px 25px rgba(0,0,0,0.06);
 }
 
-section h2 {
+h2 {
   color: #2e7d32;
-  margin-top: 0;
-}
-
-section h3 {
-  color: #1565c0;
-}
-
-/* ===== LISTS ===== */
-ul {
-  padding-left: 20px;
-}
-
-ul li {
-  margin-bottom: 8px;
-}
-
-/* ===== INFO / HIGHLIGHT BOX ===== */
-.highlight {
-  background: #e8f5e9;
-  border-left: 6px solid #2e7d32;
-  padding: 15px;
-  margin: 20px 0;
-  font-weight: 600;
-}
-
-/* ===== DATA BOX (STATS LOOK) ===== */
-.data-box {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.data-card {
-  background: linear-gradient(135deg, #e3f2fd, #f1f8e9);
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  font-weight: 600;
 }
 
 /* ===== CTA ===== */
 .cta {
-  text-align: center;
   background: #e3f2fd;
+  text-align: center;
 }
 
 .cta a {
   display: inline-block;
-  margin-top: 12px;
-  padding: 12px 24px;
+  margin-top: 10px;
+  padding: 12px 22px;
   background: #1e88e5;
   color: white;
   text-decoration: none;
@@ -130,193 +90,80 @@ ul li {
   background: #1565c0;
 }
 
-/* ===== TABLE ===== */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
-}
-
-table th, table td {
-  padding: 12px;
-  border-bottom: 1px solid #ddd;
-  text-align: left;
-}
-
-table th {
-  background: #f1f8e9;
-}
-
 /* ===== FOOTER ===== */
 footer {
   background: #222;
   color: #ccc;
   text-align: center;
   padding: 15px;
-  font-size: 0.9rem;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 1.8rem;
-  }
+/* ===================================================== */
+/* ===== INTERESTING STATISTICS BACKGROUND (KEY PART) === */
+/* ===================================================== */
 
-  nav a {
-    display: inline-block;
-    margin: 8px;
-  }
-}
-/* ===== STATISTICS GRAPHICAL BACKGROUND ===== */
 .stats-bg {
-  position: relative;
   background: #f4f7fb;
+  position: relative;
   overflow-x: hidden;
 }
 
-/* BACKGROUND LAYER */
 .stats-bg::before {
   content: "";
   position: fixed;
   inset: 0;
   z-index: -1;
+
   background:
     /* LINE CHART */
-    linear-gradient(to right, transparent 0%, #1e88e520 50%, transparent 100%),
-    linear-gradient(to top, transparent 0%, #43a04720 60%, transparent 100%),
+    linear-gradient(
+      120deg,
+      transparent 25%,
+      #1e88e530 45%,
+      transparent 70%
+    ),
 
-    /* MEAN & MEDIAN LINES */
-    linear-gradient(to right, #ff980020 0%, #ff980020 100%),
-    linear-gradient(to right, #9c27b020 0%, #9c27b020 100%),
+    /* NORMAL DISTRIBUTION */
+    radial-gradient(
+      ellipse at center,
+      #43a04735 0%,
+      #43a04725 30%,
+      transparent 70%
+    ),
+
+    /* MEAN LINE */
+    linear-gradient(to right, #ff980045 0%, #ff980045 100%),
+
+    /* MEDIAN LINE */
+    linear-gradient(to right, #9c27b045 0%, #9c27b045 100%),
 
     /* BAR CHART */
     repeating-linear-gradient(
       to top,
-      #1565c015 0px,
-      #1565c015 20px,
-      transparent 20px,
-      transparent 40px
+      #1565c020 0px,
+      #1565c020 25px,
+      transparent 25px,
+      transparent 50px
     ),
 
-    /* QQ PLOT DOTS */
-    radial-gradient(#00000015 1px, transparent 1px);
+    /* SCATTER / QQ PLOT */
+    radial-gradient(#00000018 1.2px, transparent 1.2px);
 
   background-size:
     100% 100%,
-    100% 100%,
+    100% 70%,
     100% 2px,
     100% 2px,
-    80px 200px,
-    30px 30px;
+    90px 220px,
+    28px 28px;
 
   background-position:
     center,
-    center,
-    0 35%,
-    0 55%,
+    center top,
+    0 42%,
+    0 58%,
     center bottom,
     center;
-
-  pointer-events: none;
-}
-
-/* FOREGROUND CONTENT */
-.content-layer {
-  position: relative;
-  z-index: 1;
-}
-/* ===== BIOSTATISTICS BACKGROUND ===== */
-.biostats-bg {
-  background: #f5f9fb;
-  position: relative;
-  overflow-x: hidden;
-}
-
-.biostats-bg::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-
-  background:
-    /* SURVIVAL CURVE */
-    linear-gradient(
-      to right,
-      transparent 10%,
-      #0d47a115 40%,
-      transparent 70%
-    ),
-
-    /* BASELINE HAZARD LINE */
-    linear-gradient(
-      to right,
-      #2e7d3215 0%,
-      #2e7d3215 100%
-    ),
-
-    /* SCATTER PATIENT DOTS */
-    radial-gradient(#00838f20 1.2px, transparent 1.2px),
-
-    /* BAR DISTRIBUTION */
-    repeating-linear-gradient(
-      to top,
-      #0d47a110 0px,
-      #0d47a110 18px,
-      transparent 18px,
-      transparent 36px
-    );
-
-  background-size:
-    100% 100%,
-    100% 2px,
-    28px 28px,
-    90px 240px;
-
-  background-position:
-    center,
-    0 60%,
-    center,
-    center bottom;
-
-  pointer-events: none;
-}
-/* ===== DARK MEDICAL MODE ===== */
-.bio-dark {
-  background: #0b1220;
-  color: #e0e6ed;
-}
-
-.bio-dark header,
-.bio-dark section {
-  background: #121a2b;
-  color: #e0e6ed;
-}
-
-.bio-dark nav {
-  background: #0f172a;
-}
-
-.bio-dark nav a {
-  color: #90caf9;
-}
-
-.bio-dark nav a:hover {
-  color: #66bb6a;
-}
-
-.bio-dark::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-
-  background:
-    radial-gradient(#90caf920 1px, transparent 1px),
-    linear-gradient(to right, #66bb6a20, transparent);
-
-  background-size:
-    30px 30px,
-    100% 100%;
 
   pointer-events: none;
 }
