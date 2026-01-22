@@ -334,3 +334,79 @@ footer {
 .cta a:hover {
   background: #08306b;
 }
+/* ================================================= */
+/* ===== PROBABILITY BACKGROUND ==================== */
+/* ================================================= */
+
+.prob-bg {
+  background: #f7f9fc;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Probability visual layer */
+.prob-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    /* BELL CURVE (NORMAL DISTRIBUTION) */
+    radial-gradient(
+      ellipse at center,
+      #1565c030 0%,
+      #1565c020 35%,
+      transparent 70%
+    ),
+
+    /* EXPECTATION (MEAN) LINE */
+    linear-gradient(
+      to right,
+      #ff980040 0%,
+      #ff980040 100%
+    ),
+
+    /* DISCRETE OUTCOMES (BERNOULLI / BINOMIAL) */
+    radial-gradient(#2e7d3230 1.3px, transparent 1.3px),
+
+    /* PROBABILITY GRID */
+    repeating-linear-gradient(
+      to right,
+      #00000010 0px,
+      #00000010 1px,
+      transparent 1px,
+      transparent 80px
+    ),
+    repeating-linear-gradient(
+      to top,
+      #00000010 0px,
+      #00000010 1px,
+      transparent 1px,
+      transparent 80px
+    );
+
+  background-size:
+    100% 70%,
+    100% 2px,
+    36px 36px,
+    100% 100%,
+    100% 100%;
+
+  background-position:
+    center top,
+    0 55%,
+    center,
+    center,
+    center;
+
+  pointer-events: none;
+}
+
+/* ================================================= */
+/* ===== PROBABILITY HERO ========================== */
+/* ================================================= */
+
+.prob-hero {
+  background: linear-gradient(120deg, #1565c0, #2e7d32);
+}
