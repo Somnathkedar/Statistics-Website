@@ -410,3 +410,91 @@ footer {
 .prob-hero {
   background: linear-gradient(120deg, #1565c0, #2e7d32);
 }
+/* ================================================= */
+/* ===== REGRESSION BACKGROUND ===================== */
+/* ================================================= */
+
+.reg-bg {
+  background: #f7f9fc;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Regression visual layer */
+.reg-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    /* REGRESSION LINE */
+    linear-gradient(
+      135deg,
+      transparent 30%,
+      #1e88e540 48%,
+      transparent 65%
+    ),
+
+    /* CONFIDENCE BAND */
+    linear-gradient(
+      135deg,
+      transparent 35%,
+      #90caf925 50%,
+      transparent 65%
+    ),
+
+    /* SCATTER POINTS */
+    radial-gradient(#1565c030 1.4px, transparent 1.4px),
+
+    /* RESIDUAL SPREAD */
+    repeating-linear-gradient(
+      to top,
+      #2e7d3218 0px,
+      #2e7d3218 24px,
+      transparent 24px,
+      transparent 48px
+    ),
+
+    /* GRID */
+    repeating-linear-gradient(
+      to right,
+      #00000010 0px,
+      #00000010 1px,
+      transparent 1px,
+      transparent 80px
+    ),
+    repeating-linear-gradient(
+      to top,
+      #00000010 0px,
+      #00000010 1px,
+      transparent 1px,
+      transparent 80px
+    );
+
+  background-size:
+    100% 100%,
+    100% 100%,
+    36px 36px,
+    90px 220px,
+    100% 100%,
+    100% 100%;
+
+  background-position:
+    center,
+    center,
+    center,
+    center bottom,
+    center,
+    center;
+
+  pointer-events: none;
+}
+
+/* ================================================= */
+/* ===== REGRESSION HERO ============================ */
+/* ================================================= */
+
+.reg-hero {
+  background: linear-gradient(120deg, #1e88e5, #2e7d32);
+}
