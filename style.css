@@ -167,3 +167,51 @@ footer {
 
   pointer-events: none;
 }
+/* ===== BIOSTATISTICS LIGHT BACKGROUND ===== */
+.bio-normal {
+  background: #f5f9fb;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.bio-normal::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    /* NORMAL DISTRIBUTION */
+    radial-gradient(
+      ellipse at center,
+      #2e7d3230 0%,
+      #2e7d3220 35%,
+      transparent 70%
+    ),
+
+    /* BASELINE / MEAN LINE */
+    linear-gradient(
+      to right,
+      #1565c040 0%,
+      #1565c040 100%
+    ),
+
+    /* PATIENT DOTS */
+    radial-gradient(#00838f25 1.2px, transparent 1.2px),
+
+    /* BAR DISTRIBUTION */
+    repeating-linear-gradient(
+      to top,
+      #0d47a118 0px,
+      #0d47a118 30px,
+      transparent 30px,
+      transparent 60px
+    );
+
+  background-size:
+    100% 70%,
+    100% 2px,
+    30px 30px,
+    90px 220px;
+
+  background-position:
