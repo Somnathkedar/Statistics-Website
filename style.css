@@ -1,80 +1,162 @@
 body {
+  margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
-  margin: 0;
-  background-color: #F9FAFB;
+  background: #f4f7fb;
   color: #222;
-  line-height: 1.7;
 }
 
-header {
-  background: linear-gradient(120deg, #1565C0, #2E7D32);
+/* HERO */
+.hero {
+  background: linear-gradient(120deg, #1e88e5, #43a047);
   color: white;
-  padding: 40px 20px;
   text-align: center;
+  padding: 60px 20px;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.4rem;
+.hero h1 {
+  font-size: 2.6rem;
 }
 
-header p {
-  font-size: 1.1rem;
+.hero p {
+  font-size: 1.2rem;
   opacity: 0.9;
 }
 
+/* NAV */
 nav {
-  background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
-  padding: 10px 0;
+  background: white;
+  padding: 12px;
   text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 nav a {
   margin: 0 15px;
   text-decoration: none;
-  color: #1565C0;
+  color: #1e88e5;
   font-weight: 600;
 }
 
 nav a:hover {
-  color: #2E7D32;
+  color: #43a047;
 }
 
+/* MAIN */
 main {
-  max-width: 900px;
-  margin: 30px auto;
+  max-width: 1000px;
+  margin: 40px auto;
   padding: 0 20px;
 }
 
 section {
   background: white;
   padding: 25px;
-  margin-bottom: 25px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
 }
 
-h1, h2 {
-  color: #2E7D32;
+h2 {
+  color: #2e7d32;
 }
 
-ul li {
+/* PIE CHART */
+.pie-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.pie {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #42a5f5 0% 40%,
+    #66bb6a 40% 70%,
+    #ffa726 70% 100%
+  );
+}
+
+.legend li {
+  list-style: none;
   margin-bottom: 8px;
 }
 
-.cta {
-  margin-top: 20px;
+.legend span {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+}
+
+.c1 { background: #42a5f5; }
+.c2 { background: #66bb6a; }
+.c3 { background: #ffa726; }
+
+/* BAR CHART */
+.bar-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  height: 200px;
+}
+
+.bar {
+  width: 22%;
+  background: linear-gradient(#42a5f5, #1e88e5);
+  color: white;
+  text-align: center;
+  border-radius: 6px 6px 0 0;
+  padding-top: 8px;
+  font-size: 0.9rem;
+}
+
+/* CLINICAL TRIAL */
+.trial-flow {
+  text-align: center;
+}
+
+.box {
+  background: #e8f5e9;
+  border-left: 5px solid #2e7d32;
   padding: 15px;
-  background: #E8F5E9;
-  border-left: 5px solid #2E7D32;
+  margin: 10px auto;
+  width: 60%;
+  border-radius: 6px;
   font-weight: 600;
 }
 
-footer {
+.arrow {
+  font-size: 1.5rem;
+  color: #555;
+}
+
+/* CTA */
+.cta {
   text-align: center;
-  padding: 15px;
+  background: #e3f2fd;
+}
+
+.cta a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #1e88e5;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.cta a:hover {
+  background: #1565c0;
+}
+
+/* FOOTER */
+footer {
   background: #222;
   color: #ccc;
-  font-size: 0.9rem;
+  text-align: center;
+  padding: 15px;
 }
