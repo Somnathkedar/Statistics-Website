@@ -498,3 +498,72 @@ footer {
 .reg-hero {
   background: linear-gradient(120deg, #1e88e5, #2e7d32);
 }
+/* ================================================= */
+/* ===== ABOUT PAGE BACKGROUND ===================== */
+/* ================================================= */
+
+.about-bg {
+  background: #f7f9fc;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* About page visual layer */
+.about-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    /* ANALYTICAL CURVE */
+    linear-gradient(
+      120deg,
+      transparent 30%,
+      #1e88e530 48%,
+      transparent 65%
+    ),
+
+    /* SOFT BELL CURVE */
+    radial-gradient(
+      ellipse at center,
+      #2e7d3230 0%,
+      #2e7d3220 35%,
+      transparent 70%
+    ),
+
+    /* GRID (LEARNING / ACADEMIC FEEL) */
+    repeating-linear-gradient(
+      to right,
+      #00000010 0px,
+      #00000010 1px,
+      transparent 1px,
+      transparent 90px
+    ),
+    repeating-linear-gradient(
+      to top,
+      #00000010 0px,
+      #00000010 1px,
+      transparent 1px,
+      transparent 90px
+    ),
+
+    /* DATA POINTS */
+    radial-gradient(#1565c030 1.3px, transparent 1.3px);
+
+  background-size:
+    100% 100%,
+    100% 70%,
+    100% 100%,
+    100% 100%,
+    36px 36px;
+
+  background-position:
+    center,
+    center top,
+    center,
+    center,
+    center;
+
+  pointer-events: none;
+}
