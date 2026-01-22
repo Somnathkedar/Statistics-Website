@@ -215,3 +215,122 @@ footer {
     90px 220px;
 
   background-position:
+/* ================================================= */
+/* ===== BIOSTATISTICS PREMIUM BACKGROUND =========== */
+/* ================================================= */
+
+.bio-bg {
+  background: #f6fafc;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Background data visuals */
+.bio-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    /* Kaplan–Meier survival curve */
+    linear-gradient(
+      120deg,
+      transparent 25%,
+      #0d47a120 45%,
+      transparent 70%
+    ),
+
+    /* Normal distribution (bell curve) */
+    radial-gradient(
+      ellipse at center,
+      #2e7d3230 0%,
+      #2e7d3220 30%,
+      transparent 70%
+    ),
+
+    /* Baseline / hazard line */
+    linear-gradient(
+      to right,
+      #1565c040 0%,
+      #1565c040 100%
+    ),
+
+    /* Patient-level scatter dots */
+    radial-gradient(#00838f25 1.2px, transparent 1.2px),
+
+    /* Outcome distribution bars */
+    repeating-linear-gradient(
+      to top,
+      #0d47a118 0px,
+      #0d47a118 28px,
+      transparent 28px,
+      transparent 56px
+    );
+
+  background-size:
+    100% 100%,
+    100% 65%,
+    100% 2px,
+    32px 32px,
+    100px 240px;
+
+  background-position:
+    center,
+    center top,
+    0 60%,
+    center,
+    center bottom;
+
+  pointer-events: none;
+}
+
+/* ================================================= */
+/* ===== BIOSTATISTICS HERO ========================= */
+/* ================================================= */
+
+.bio-hero {
+  background: linear-gradient(120deg, #0d47a1, #2e7d32);
+}
+
+/* ================================================= */
+/* ===== CONTENT CARDS ============================== */
+/* ================================================= */
+
+.card {
+  background: white;
+  padding: 28px;
+  margin-bottom: 30px;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+  color: #2e7d32;
+}
+
+/* ================================================= */
+/* ===== CTA ======================================= */
+/* ================================================= */
+
+.cta {
+  text-align: center;
+  background: #e3f2fd;
+  padding: 30px;
+  border-radius: 14px;
+}
+
+.cta a {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 26px;
+  background: #0d47a1;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.cta a:hover {
+  background: #08306b;
+}
