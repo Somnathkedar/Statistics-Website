@@ -280,3 +280,43 @@ footer {
 
   pointer-events: none;
 }
+/* ===== DARK MEDICAL MODE ===== */
+.bio-dark {
+  background: #0b1220;
+  color: #e0e6ed;
+}
+
+.bio-dark header,
+.bio-dark section {
+  background: #121a2b;
+  color: #e0e6ed;
+}
+
+.bio-dark nav {
+  background: #0f172a;
+}
+
+.bio-dark nav a {
+  color: #90caf9;
+}
+
+.bio-dark nav a:hover {
+  color: #66bb6a;
+}
+
+.bio-dark::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    radial-gradient(#90caf920 1px, transparent 1px),
+    linear-gradient(to right, #66bb6a20, transparent);
+
+  background-size:
+    30px 30px,
+    100% 100%;
+
+  pointer-events: none;
+}
