@@ -225,3 +225,58 @@ footer {
   position: relative;
   z-index: 1;
 }
+/* ===== BIOSTATISTICS BACKGROUND ===== */
+.biostats-bg {
+  background: #f5f9fb;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.biostats-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    /* SURVIVAL CURVE */
+    linear-gradient(
+      to right,
+      transparent 10%,
+      #0d47a115 40%,
+      transparent 70%
+    ),
+
+    /* BASELINE HAZARD LINE */
+    linear-gradient(
+      to right,
+      #2e7d3215 0%,
+      #2e7d3215 100%
+    ),
+
+    /* SCATTER PATIENT DOTS */
+    radial-gradient(#00838f20 1.2px, transparent 1.2px),
+
+    /* BAR DISTRIBUTION */
+    repeating-linear-gradient(
+      to top,
+      #0d47a110 0px,
+      #0d47a110 18px,
+      transparent 18px,
+      transparent 36px
+    );
+
+  background-size:
+    100% 100%,
+    100% 2px,
+    28px 28px,
+    90px 240px;
+
+  background-position:
+    center,
+    0 60%,
+    center,
+    center bottom;
+
+  pointer-events: none;
+}
