@@ -167,3 +167,61 @@ footer {
     margin: 8px;
   }
 }
+/* ===== STATISTICS GRAPHICAL BACKGROUND ===== */
+.stats-bg {
+  position: relative;
+  background: #f4f7fb;
+  overflow-x: hidden;
+}
+
+/* BACKGROUND LAYER */
+.stats-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    /* LINE CHART */
+    linear-gradient(to right, transparent 0%, #1e88e520 50%, transparent 100%),
+    linear-gradient(to top, transparent 0%, #43a04720 60%, transparent 100%),
+
+    /* MEAN & MEDIAN LINES */
+    linear-gradient(to right, #ff980020 0%, #ff980020 100%),
+    linear-gradient(to right, #9c27b020 0%, #9c27b020 100%),
+
+    /* BAR CHART */
+    repeating-linear-gradient(
+      to top,
+      #1565c015 0px,
+      #1565c015 20px,
+      transparent 20px,
+      transparent 40px
+    ),
+
+    /* QQ PLOT DOTS */
+    radial-gradient(#00000015 1px, transparent 1px);
+
+  background-size:
+    100% 100%,
+    100% 100%,
+    100% 2px,
+    100% 2px,
+    80px 200px,
+    30px 30px;
+
+  background-position:
+    center,
+    center,
+    0 35%,
+    0 55%,
+    center bottom,
+    center;
+
+  pointer-events: none;
+}
+
+/* FOREGROUND CONTENT */
+.content-layer {
+  position: relative;
+  z-index: 1;
+}
