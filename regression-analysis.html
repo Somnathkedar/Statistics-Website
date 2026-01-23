@@ -1,66 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Regression Analysis | Statistics Made Easy</title>
-  <meta name="description" content="Learn regression analysis with simple explanations, examples, and real-life applications.">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Regression Explained Simply | Statistics Made Easy</title>
+    <meta name="description" content="Learn regression analysis in simple language with real-life examples, charts, and visuals. Perfect for beginners and biostatistics students.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 0;
+            background: #f4f6f8;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #0a3d62;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 30px;
+            background: white;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        h1, h2, h3 {
+            color: #0a3d62;
+        }
+
+        .highlight {
+            background: #eef6ff;
+            padding: 15px;
+            border-left: 5px solid #0a3d62;
+            margin: 20px 0;
+        }
+
+        .example-box {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            margin: 20px 0;
+        }
+
+        canvas {
+            margin-top: 30px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #0a3d62;
+            color: white;
+            margin-top: 30px;
+        }
+
+        code {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            display: block;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+    </style>
 </head>
 
-<body class="reg-bg">
+<body>
 
-<header class="hero reg-hero">
-  <h1>Regression Analysis 📈</h1>
-  <p>Understanding relationships between variables</p>
+<header>
+    <h1>Regression Explained in Simple Language</h1>
+    <p>With real-life examples, charts, and visuals</p>
 </header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="statistics.html">Basics</a>
-  <a href="probability.html">Probability</a>
-  <a href="regression-analysis.html">Regression</a>
-  <a href="biostatistics.html">Biostatistics</a>
-  <a href="career-opportunities.html">Careers</a>
-</nav>
-
-<main>
-
-  <section class="card">
-    <h2>What is Regression Analysis?</h2>
+<section>
+    <h2>What is Regression?</h2>
     <p>
-      Regression analysis studies the relationship between variables
-      and helps predict one variable based on another.
+        Regression is a statistical method that helps us understand how one variable changes
+        when another variable changes. It also allows us to predict future values.
     </p>
-  </section>
 
-  <section class="card">
-    <h2>Simple Linear Regression</h2>
+    <div class="highlight">
+        <strong>Simple definition:</strong><br>
+        Regression explains the relationship between an outcome (dependent variable)
+        and one or more predictors (independent variables).
+    </div>
+</section>
+
+<section>
+    <h2>Real-Life Example: Age and Blood Pressure</h2>
     <p>
-      Simple linear regression models the relationship between
-      one independent variable and one dependent variable.
+        Blood pressure usually increases as age increases. Regression helps us measure
+        <strong>how much</strong> it increases.
     </p>
-  </section>
 
-  <section class="card">
-    <h2>Applications of Regression</h2>
+    <div class="example-box">
+        <ul>
+            <li>Independent Variable: Age</li>
+            <li>Dependent Variable: Blood Pressure</li>
+        </ul>
+    </div>
+
+    <canvas id="bpChart"></canvas>
+</section>
+
+<section>
+    <h2>Regression Line Explanation</h2>
+    <p>
+        The regression line shows the best straight-line relationship between age and blood pressure.
+    </p>
+
+    <div class="highlight">
+        BP = β₀ + β₁ × Age
+        <br><br>
+        β₁ represents how much blood pressure changes for every 1-year increase in age.
+    </div>
+</section>
+
+<section>
+    <h2>Multiple Regression (Real Life)</h2>
+    <p>
+        Blood pressure does not depend on age alone. Other factors also influence it:
+    </p>
+
     <ul>
-      <li>Sales prediction</li>
-      <li>Medical research</li>
-      <li>Economics and finance</li>
-      <li>Machine learning</li>
+        <li>Body weight</li>
+        <li>Salt intake</li>
+        <li>Physical activity</li>
+        <li>Stress</li>
     </ul>
-  </section>
 
-  <section class="cta">
-    <p>👉 Regression made you think hard?</p>
-    <a href="shop.html">Explore Regression Merch</a>
-  </section>
+    <div class="highlight">
+        BP = β₀ + β₁(Age) + β₂(Weight) + β₃(Salt Intake)
+    </div>
+</section>
 
-</main>
+<section>
+    <h2>Why Regression is Important</h2>
+    <ul>
+        <li>Helps in prediction</li>
+        <li>Adjusts for confounding variables</li>
+        <li>Used in almost all medical research</li>
+        <li>Easy to interpret</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Simple Linear Regression Logic (Java)</h2>
+
+    <code>
+double slope = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX);
+double intercept = (sumY - slope * sumX) / n;
+    </code>
+
+    <p>
+        This logic calculates the regression line mathematically.
+    </p>
+</section>
+
+<section>
+    <h2>Logistic Regression (Binary Outcome)</h2>
+    <p>
+        When the outcome is Yes/No (e.g., Hypertension: Yes or No),
+        logistic regression is used.
+    </p>
+
+    <div class="highlight">
+        Probability = 1 / (1 + e<sup>-z</sup>)
+    </div>
+</section>
+
+<section>
+    <h2>Conclusion</h2>
+    <p>
+        Regression is one of the most powerful tools in statistics.
+        It transforms raw data into meaningful insights and helps
+        researchers make data-driven decisions.
+    </p>
+</section>
 
 <footer>
-  <p>© 2023 Statistics Made Easy</p>
+    <p>© 2026 Statistics Made Easy | Regression Tutorial</p>
 </footer>
+
+<script>
+    const ctx = document.getElementById('bpChart').getContext('2d');
+
+    new Chart(ctx, {
+        type: 'scatter',
+        data: {
+            datasets: [
+                {
+                    label: 'Observed Data',
+                    data: [
+                        {x: 25, y: 118},
+                        {x: 35, y: 125},
+                        {x: 45, y: 132},
+                        {x: 55, y: 145}
+                    ],
+                    backgroundColor: 'blue'
+                },
+                {
+                    label: 'Regression Line',
+                    type: 'line',
+                    data: [
+                        {x: 25, y: 120},
+                        {x: 55, y: 145}
+                    ],
+                    borderColor: 'red',
+                    fill: false
+                }
+            ]
+        },
+        options: {
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Age (Years)'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Blood Pressure (mmHg)'
+                    }
+                }
+            }
+        }
+    });
+</script>
 
 </body>
 </html>
