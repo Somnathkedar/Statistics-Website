@@ -1,146 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Regression Explained Simply</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f6f8;
-    margin: 0;
-    color: #333;
-}
-
-header {
-    background: #0a3d62;
-    color: white;
-    padding: 25px;
-    text-align: center;
-}
-
-section {
-    background: white;
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 25px;
-    border-radius: 8px;
-}
-
-h2 {
-    color: #0a3d62;
-}
-
-.highlight {
-    background: #eef6ff;
-    padding: 15px;
-    border-left: 5px solid #0a3d62;
-    margin: 15px 0;
-}
-
-canvas {
-    border: 1px solid #ccc;
-    margin-top: 20px;
-}
-
-footer {
-    background: #0a3d62;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>Regression Analysis | Statistics Made Easy</title>
+  <meta name="description" content="Learn regression analysis in simple language with real-life examples from healthcare, education, salary prediction, and daily life.">
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="prob-bg">
 
-<header>
-<h1>Regression Explained in Simple Language</h1>
-<p>With real-life examples and visuals</p>
+<header class="hero prob-hero">
+  <h1>Regression Analysis 📈</h1>
+  <p>Understanding relationships and making predictions from data</p>
 </header>
 
-<section>
-<h2>What is Regression?</h2>
-<p>
-Regression is a statistical method that helps us understand how one variable changes
-when another variable changes and allows us to make predictions.
-</p>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="statistics.html">Basics</a>
+  <a href="probability.html">Probability</a>
+  <a href="regression-analysis.html">Regression</a>
+  <a href="biostatistics.html">Biostatistics</a>
+  <a href="career-opportunities.html">Careers</a>
+</nav>
 
-<div class="highlight">
-Regression explains the relationship between an outcome variable and one or more predictor variables.
-</div>
+<main>
+
+<section class="card">
+  <h2>What is Regression Analysis?</h2>
+  <p>
+    Regression analysis is a statistical method used to understand the relationship
+    between variables. It helps us see how one variable changes when another variable changes.
+  </p>
+  <p>
+    In simple words, regression answers questions like:
+  </p>
+  <ul>
+    <li>Does age affect blood pressure?</li>
+    <li>Does more study time improve marks?</li>
+    <li>Does work experience increase salary?</li>
+    <li>Does medicine dosage reduce disease severity?</li>
+  </ul>
 </section>
 
-<section>
-<h2>Real-Life Example: Age vs Blood Pressure</h2>
-<p>
-As age increases, blood pressure usually increases. Regression helps quantify this relationship.
-</p>
-
-<canvas id="chart" width="800" height="400"></canvas>
+<section class="card">
+  <h2>Why Do We Need Regression?</h2>
+  <p>
+    In real life, many factors affect an outcome at the same time.
+    Regression helps us separate these effects and understand which factors matter the most.
+  </p>
+  <p>
+    Without regression, we can only guess. With regression, we use data to support decisions.
+  </p>
 </section>
 
-<section>
-<h2>Regression Equation</h2>
-<div class="highlight">
-BP = β₀ + β₁ × Age
-<br>
-β₁ shows how much BP changes for each year increase in age.
-</div>
+<section class="card">
+  <h2>Dependent and Independent Variables</h2>
+  <p>
+    Every regression analysis has two main parts:
+  </p>
+  <ul>
+    <li><strong>Dependent Variable (Outcome):</strong> What we want to predict or explain</li>
+    <li><strong>Independent Variable (Predictor):</strong> What influences the outcome</li>
+  </ul>
+
+  <p><strong>Example:</strong></p>
+  <ul>
+    <li>Dependent variable: Blood Pressure</li>
+    <li>Independent variable: Age</li>
+  </ul>
 </section>
 
-<section>
-<h2>Why Regression is Important</h2>
-<ul>
-<li>Used in medical research</li>
-<li>Helps in prediction</li>
-<li>Adjusts for confounding factors</li>
-<li>Easy to interpret</li>
-</ul>
+<section class="card">
+  <h2>Real-Life Example 1: Age and Blood Pressure</h2>
+  <p>
+    As people grow older, their blood pressure usually increases.
+    Regression helps us measure how much blood pressure increases with age.
+  </p>
+  <p>
+    If regression shows that blood pressure increases by 0.8 mmHg per year,
+    doctors can use this information for early prevention.
+  </p>
 </section>
+
+<section class="card">
+  <h2>Simple Linear Regression</h2>
+  <p>
+    Simple linear regression studies the relationship between:
+  </p>
+  <ul>
+    <li>One independent variable</li>
+    <li>One dependent variable</li>
+  </ul>
+
+  <p>
+    It is represented using a straight line:
+  </p>
+  <p>
+    <strong>Y = β₀ + β₁X</strong>
+  </p>
+
+  <p>
+    Where:
+  </p>
+  <ul>
+    <li>Y = dependent variable</li>
+    <li>X = independent variable</li>
+    <li>β₀ = intercept</li>
+    <li>β₁ = slope</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>Interpretation in Simple Language</h2>
+  <p>
+    If regression shows:
+  </p>
+  <p>
+    <strong>Salary = 15,000 + 2,000 × Experience</strong>
+  </p>
+  <p>
+    It means:
+  </p>
+  <ul>
+    <li>Base salary is ₹15,000</li>
+    <li>For every additional year of experience, salary increases by ₹2,000</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>Real-Life Example 2: Study Hours and Exam Marks</h2>
+  <p>
+    Students often ask whether studying more really improves marks.
+    Regression can answer this clearly.
+  </p>
+  <p>
+    If regression shows that each extra hour of study increases marks by 5 points,
+    students can plan their study time better.
+  </p>
+</section>
+
+<section class="card">
+  <h2>Multiple Regression</h2>
+  <p>
+    In real life, one factor is rarely enough.
+    Multiple regression studies the effect of many variables together.
+  </p>
+
+  <p><strong>Example:</strong></p>
+  <p>
+    Blood Pressure = Age + Weight + Salt Intake + Physical Activity
+  </p>
+
+  <p>
+    This helps doctors understand which factor contributes more to high blood pressure.
+  </p>
+</section>
+
+<section class="card">
+  <h2>Why Multiple Regression is Powerful</h2>
+  <ul>
+    <li>Adjusts for confounding factors</li>
+    <li>Gives more accurate results</li>
+    <li>Used in medical and social research</li>
+    <li>Helps in policy making</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>Regression vs Correlation</h2>
+  <p>
+    Correlation only tells us whether two variables move together.
+    Regression explains how one variable affects another.
+  </p>
+  <p>
+    Regression is used for prediction and decision-making,
+    while correlation is used only for association.
+  </p>
+</section>
+
+<section class="card">
+  <h2>Logistic Regression</h2>
+  <p>
+    When the outcome is Yes or No, logistic regression is used.
+  </p>
+
+  <p><strong>Examples:</strong></p>
+  <ul>
+    <li>Hypertension: Yes / No</li>
+    <li>Disease: Present / Absent</li>
+    <li>Pass / Fail</li>
+  </ul>
+
+  <p>
+    Logistic regression predicts probability instead of a direct value.
+  </p>
+</section>
+
+<section class="card">
+  <h2>Real-Life Example 3: Risk of Hypertension</h2>
+  <p>
+    Logistic regression can estimate the probability that a person has hypertension
+    based on age, weight, and lifestyle.
+  </p>
+  <p>
+    This helps in early diagnosis and preventive healthcare.
+  </p>
+</section>
+
+<section class="card">
+  <h2>Applications of Regression Analysis</h2>
+  <ul>
+    <li>Medical research</li>
+    <li>Economics and finance</li>
+    <li>Education planning</li>
+    <li>Marketing and sales prediction</li>
+    <li>Machine learning models</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>Why Regression is Important for Students</h2>
+  <p>
+    Regression is one of the most commonly used statistical tools.
+    Understanding it opens doors to careers in:
+  </p>
+  <ul>
+    <li>Biostatistics</li>
+    <li>Data Science</li>
+    <li>Analytics</li>
+    <li>Research</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>Conclusion</h2>
+  <p>
+    Regression analysis is a powerful and practical statistical method.
+    It helps us understand relationships, make predictions, and take informed decisions.
+  </p>
+  <p>
+    Whether in healthcare, education, business, or daily life,
+    regression turns data into meaningful insights.
+  </p>
+</section>
+
+<section class="cta">
+  <p>👉 Want to master regression and data analysis?</p>
+  <a href="career-opportunities.html">Explore Careers in Statistics</a>
+</section>
+
+</main>
 
 <footer>
-<p>© 2026 Statistics Made Easy</p>
+  <p>© 2023 Statistics Made Easy</p>
 </footer>
-
-<script>
-const canvas = document.getElementById("chart");
-const ctx = canvas.getContext("2d");
-
-// Data
-const age = [25, 35, 45, 55];
-const bp  = [118, 125, 132, 145];
-
-// Draw axes
-ctx.beginPath();
-ctx.moveTo(60, 20);
-ctx.lineTo(60, 350);
-ctx.lineTo(760, 350);
-ctx.stroke();
-
-// Plot points
-ctx.fillStyle = "blue";
-for (let i = 0; i < age.length; i++) {
-    let x = 60 + (age[i] - 20) * 10;
-    let y = 350 - (bp[i] - 110) * 4;
-    ctx.beginPath();
-    ctx.arc(x, y, 5, 0, Math.PI * 2);
-    ctx.fill();
-}
-
-// Regression line
-ctx.strokeStyle = "red";
-ctx.beginPath();
-ctx.moveTo(60 + (25 - 20) * 10, 350 - (120 - 110) * 4);
-ctx.lineTo(60 + (55 - 20) * 10, 350 - (145 - 110) * 4);
-ctx.stroke();
-
-// Labels
-ctx.fillStyle = "black";
-ctx.fillText("Age →", 720, 380);
-ctx.fillText("BP ↑", 20, 30);
-</script>
 
 </body>
 </html>
